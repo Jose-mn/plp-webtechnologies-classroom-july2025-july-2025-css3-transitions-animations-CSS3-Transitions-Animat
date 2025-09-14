@@ -1,0 +1,48 @@
+/* === Part 1: CSS Transitions & Animations === */
+
+/* Hover transition */
+.hover-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hover-btn:hover {
+  transform: scale(1.1);
+  background: #45a049;
+}
+
+/* Continuous animation with keyframes */
+@keyframes fadeSlide {
+  0%   { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 20px 0;
+  animation: fadeSlide 2s infinite alternate;
+}
+
+/* === Part 3: CSS class triggered by JS === */
+.box {
+  width: 100px;
+  height: 100px;
+  background: steelblue;
+  margin-top: 10px;
+}
+
+/* Bounce animation applied by JS */
+.box.animate {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-30px); }
+}
